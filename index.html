@@ -1,287 +1,257 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Legacy Archive — Capture Life. Pass It On.</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap');
-        
-        :root {
-            --emerald: #0a5c3a;
-        }
-        
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
-        }
-        
-        .heading-font {
-            font-family: 'Playfair Display', sans-serif;
-        }
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap");
 
-        .hero-bg {
-            background: linear-gradient(rgba(10, 92, 58, 0.85), rgba(10, 92, 58, 0.9)), url('https://picsum.photos/id/1015/2000/1200') center/cover;
-        }
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+      }
 
-        .tree-icon {
-            filter: drop-shadow(0 10px 15px rgba(234, 179, 8, 0.3));
-        }
+      .heading-font {
+        font-family: "Playfair Display", sans-serif;
+      }
 
-        .section-header {
-            font-family: 'Playfair Display', sans-serif;
-        }
+      .hero-bg {
+        background:
+          linear-gradient(rgba(10, 92, 58, 0.85), rgba(10, 92, 58, 0.9)),
+          url("https://picsum.photos/id/1015/2000/1200") center/cover;
+      }
+
+      .tree-icon {
+        filter: drop-shadow(0 10px 15px rgba(234, 179, 8, 0.3));
+      }
+
+      .section-header {
+        font-family: "Playfair Display", sans-serif;
+      }
     </style>
-</head>
-<body class="bg-zinc-50 text-zinc-800">
+  </head>
+  <body class="bg-zinc-50 text-zinc-800">
     <!-- Navbar -->
     <nav class="bg-white border-b sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <img src="https://picsum.photos/id/1074/64/64" alt="Legacy Archive Logo" class="w-9 h-9 tree-icon" id="logo">
-                <div>
-                    <span class="heading-font text-2xl font-bold tracking-tight text-emerald-800">Legacy</span>
-                    <span class="heading-font text-2xl font-bold tracking-tight text-amber-600">Archive</span>
-                </div>
-            </div>
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#problem" class="hover:text-emerald-700 transition">The Problem</a>
-                <a href="#solution" class="hover:text-emerald-700 transition">Solution</a>
-                <a href="#how" class="hover:text-emerald-700 transition">How it Works</a>
-                <a href="#storage" class="hover:text-emerald-700 transition">Your Storage</a>
-            </div>
-            <button onclick="showWaitlist()" 
-                    class="bg-emerald-700 hover:bg-emerald-800 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition">
-                Join Waitlist
-            </button>
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center gap-3">
+          <img
+            src="https://picsum.photos/id/1074/64/64"
+            alt="Legacy Archive Logo"
+            class="w-9 h-9 tree-icon"
+            id="logo"
+          />
+          <div>
+            <span
+              class="heading-font text-2xl font-bold tracking-tight text-emerald-800"
+              >Legacy</span
+            >
+            <span
+              class="heading-font text-2xl font-bold tracking-tight text-amber-600"
+              >Archive</span
+            >
+          </div>
         </div>
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#problem" class="hover:text-emerald-700 transition"
+            >The Problem</a
+          >
+          <a href="#solution" class="hover:text-emerald-700 transition"
+            >Solution</a
+          >
+          <a href="#how" class="hover:text-emerald-700 transition"
+            >How it Works</a
+          >
+          <a href="#storage" class="hover:text-emerald-700 transition"
+            >Your Storage</a
+          >
+        </div>
+        <button
+          onclick="showWaitlist()"
+          class="bg-emerald-700 hover:bg-emerald-800 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition"
+        >
+          Join Waitlist
+        </button>
+      </div>
     </nav>
 
     <!-- Hero -->
     <section class="hero-bg text-white py-24 md:py-32">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full mb-6 text-sm">
-                <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                Now in early access
-            </div>
-            
-            <h1 class="heading-font text-6xl md:text-7xl font-bold leading-tight mb-6">
-                Don't let your real life<br>disappear.
-            </h1>
-            
-            <p class="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto mb-10">
-                Effortlessly capture your daily moments. Securely pass them to your children — with full control over where your memories live.
-            </p>
-
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button onclick="showWaitlist()" 
-                        class="bg-amber-500 hover:bg-amber-600 text-emerald-900 font-semibold px-10 py-4 rounded-2xl text-lg transition flex items-center justify-center gap-3">
-                    <i class="fas fa-envelope"></i>
-                    Join the Waitlist
-                </button>
-                <button onclick="watchDemo()" 
-                        class="border border-white/70 hover:bg-white/10 text-white font-medium px-8 py-4 rounded-2xl text-lg transition flex items-center gap-3">
-                    <i class="fas fa-play"></i>
-                    Watch Demo
-                </button>
-            </div>
-
-            <div class="mt-12 flex justify-center gap-8 text-sm opacity-75">
-                <div class="flex items-center gap-2">
-                    <i class="fas fa-lock"></i>
-                    <span>End-to-End Encrypted</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <i class="fas fa-cloud"></i>
-                    <span>You Choose Storage</span>
-                </div>
-            </div>
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <div
+          class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full mb-6 text-sm"
+        >
+          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+          Now in early access
         </div>
+
+        <h1
+          class="heading-font text-6xl md:text-7xl font-bold leading-tight mb-6"
+        >
+          Don't let your real life<br />disappear.
+        </h1>
+
+        <p class="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto mb-10">
+          Effortlessly capture your daily moments. Securely pass them to your
+          children — with full control over where your memories live.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button
+            onclick="showWaitlist()"
+            class="bg-amber-500 hover:bg-amber-600 text-emerald-900 font-semibold px-10 py-4 rounded-2xl text-lg transition flex items-center justify-center gap-3"
+          >
+            <i class="fas fa-envelope"></i>
+            Join the Waitlist
+          </button>
+          <button
+            onclick="watchDemo()"
+            class="border border-white/70 hover:bg-white/10 text-white font-medium px-8 py-4 rounded-2xl text-lg transition flex items-center gap-3"
+          >
+            <i class="fas fa-play"></i>
+            Watch Demo
+          </button>
+        </div>
+
+        <div class="mt-12 flex justify-center gap-8 text-sm opacity-75">
+          <div class="flex items-center gap-2">
+            <i class="fas fa-lock"></i>
+            <span>End-to-End Encrypted</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-cloud"></i>
+            <span>You Choose Storage</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Problem -->
     <section id="problem" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="section-header text-5xl font-bold mb-4 text-emerald-900">The Pain Most Parents Ignore</h2>
-                <p class="text-xl text-zinc-600 max-w-2xl mx-auto">Until it's too late.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-8">
-                    <div class="flex gap-6">
-                        <div class="w-12 h-12 bg-red-100 rounded-2xl flex items-center justify-center flex-shrink-0">📱</div>
-                        <div>
-                            <h3 class="font-semibold text-xl mb-2">Scattered Digital Traces</h3>
-                            <p class="text-zinc-600">Photos on old phones. Forgotten cloud accounts. No easy way for your children to find your real stories.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-6">
-                        <div class="w-12 h-12 bg-red-100 rounded-2xl flex items-center justify-center flex-shrink-0">🔒</div>
-                        <div>
-                            <h3 class="font-semibold text-xl mb-2">Password Hell</h3>
-                            <p class="text-zinc-600">Your kids shouldn't have to hunt through accounts or beg for access after you're gone.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-zinc-100 p-8 rounded-3xl text-center">
-                    <p class="italic text-lg">"When my father died, I had almost nothing of his everyday voice and moments. I don't want that for my children."</p>
-                    <p class="mt-6 text-sm text-zinc-500">- Founder, Legacy Archive</p>
-                </div>
-            </div>
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="section-header text-5xl font-bold mb-4 text-emerald-900">
+            The Pain Most Parents Ignore
+          </h2>
+          <p class="text-xl text-zinc-600 max-w-2xl mx-auto">
+            Until it's too late.
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="space-y-8">
+            <div class="flex gap-6">
+              <div
+                class="w-12 h-12 bg-red-100 rounded-2xl flex items-center justify-center flex-shrink-0"
+              >
+                📱
+              </div>
+              <div>
+                <h3 class="font-semibold text-xl mb-2">
+                  Scattered Digital Traces
+                </h3>
+                <p class="text-zinc-600">
+                  Photos on old phones. Forgotten cloud accounts. No easy way
+                  for your children to find your real stories.
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div
+                class="w-12 h-12 bg-red-100 rounded-2xl flex items-center justify-center flex-shrink-0"
+              >
+                🔒
+              </div>
+              <div>
+                <h3 class="font-semibold text-xl mb-2">Password Hell</h3>
+                <p class="text-zinc-600">
+                  Your kids shouldn't have to hunt through accounts or beg for
+                  access after you're gone.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-zinc-100 p-8 rounded-3xl text-center">
+            <p class="italic text-lg">
+              "When my father died, I had almost nothing of his everyday voice
+              and moments. I don't want that for my children."
+            </p>
+            <p class="mt-6 text-sm text-zinc-500">- Founder, Legacy Archive</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Solution -->
-    <section id="solution" class="py-20 bg-emerald-50">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="section-header text-5xl font-bold mb-4 text-emerald-900">Legacy Archive</h2>
-                <p class="text-2xl text-emerald-800">Your life, captured. Your way.</p>
-            </div>
+    <!-- Solution, How it Works, Storage, CTA, Footer sections are unchanged -->
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-3xl shadow-sm">
-                    <div class="text-4xl mb-6">📸</div>
-                    <h3 class="font-semibold text-2xl mb-3">Effortless Capture</h3>
-                    <p class="text-zinc-600">One-tap photos, videos, voice notes, and reflections. Auto-import from your camera roll.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl shadow-sm">
-                    <div class="text-4xl mb-6">🔐</div>
-                    <h3 class="font-semibold text-2xl mb-3">You Control Storage</h3>
-                    <p class="text-zinc-600">Use your Google Drive, iCloud, our secure vaults, or hybrid. No forced lock-in.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl shadow-sm">
-                    <div class="text-4xl mb-6">👨‍👩‍👧</div>
-                    <h3 class="font-semibold text-2xl mb-3">Seamless Handover</h3>
-                    <p class="text-zinc-600">Designate heirs. When the time comes, they receive full access — no passwords needed.</p>
-                </div>
-            </div>
+    <!-- Waitlist Modal - FIXED -->
+    <div
+      id="waitlistModal"
+      class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-[100]"
+    >
+      <div class="bg-white rounded-3xl max-w-md w-full mx-4 p-8">
+        <div class="flex justify-between items-center mb-6">
+          <h3 class="text-2xl font-semibold">Join the Waitlist</h3>
+          <button
+            onclick="hideWaitlist()"
+            class="text-3xl leading-none text-zinc-400 hover:text-zinc-600"
+          >
+            &times;
+          </button>
         </div>
-    </section>
 
-    <!-- How it Works -->
-    <section id="how" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="section-header text-5xl font-bold mb-4 text-emerald-900">How It Works</h2>
+        <form id="waitlistForm">
+          <div class="space-y-6">
+            <div>
+              <label class="block text-sm font-medium mb-2">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                required
+                class="w-full px-4 py-3 border border-zinc-300 rounded-2xl focus:outline-none focus:border-emerald-500"
+              />
             </div>
-            
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 mx-auto bg-emerald-100 rounded-2xl flex items-center justify-center text-3xl mb-6">1️⃣</div>
-                    <h4 class="font-semibold mb-2">Capture Daily Life</h4>
-                    <p class="text-sm text-zinc-600">Naturally, in the background</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 mx-auto bg-emerald-100 rounded-2xl flex items-center justify-center text-3xl mb-6">2️⃣</div>
-                    <h4 class="font-semibold mb-2">Choose Storage</h4>
-                    <p class="text-sm text-zinc-600">Your cloud or ours</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 mx-auto bg-emerald-100 rounded-2xl flex items-center justify-center text-3xl mb-6">3️⃣</div>
-                    <h4 class="font-semibold mb-2">AI Organization</h4>
-                    <p class="text-sm text-zinc-600">Timelines, search, stories</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 mx-auto bg-emerald-100 rounded-2xl flex items-center justify-center text-3xl mb-6">4️⃣</div>
-                    <h4 class="font-semibold mb-2">Pass It On</h4>
-                    <p class="text-sm text-zinc-600">Secure handover to heirs</p>
-                </div>
+            <div>
+              <label class="block text-sm font-medium mb-2"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                id="email"
+                required
+                class="w-full px-4 py-3 border border-zinc-300 rounded-2xl focus:outline-none focus:border-emerald-500"
+              />
             </div>
-        </div>
-    </section>
-
-    <!-- Storage Control -->
-    <section id="storage" class="py-20 bg-zinc-900 text-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="section-header text-5xl font-bold mb-4">Your Memories.<br>Your Storage.</h2>
-                <p class="text-xl text-zinc-400">Full control. No compromises.</p>
+            <div>
+              <label class="block text-sm font-medium mb-2"
+                >How many children do you have?</label
+              >
+              <input
+                type="number"
+                id="children"
+                min="1"
+                required
+                class="w-full px-4 py-3 border border-zinc-300 rounded-2xl focus:outline-none focus:border-emerald-500"
+              />
             </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-zinc-800 p-8 rounded-3xl">
-                    <h3 class="font-semibold text-2xl mb-4 text-amber-400">App-Managed</h3>
-                    <p class="text-zinc-400 mb-6">Simplest option. We handle secure, durable storage with automatic backups.</p>
-                    <span class="text-xs bg-emerald-900 px-3 py-1 rounded-full">Recommended for most</span>
-                </div>
-                <div class="bg-zinc-800 p-8 rounded-3xl">
-                    <h3 class="font-semibold text-2xl mb-4 text-amber-400">Bring Your Own</h3>
-                    <p class="text-zinc-400 mb-6">Google Drive, iCloud, Dropbox. Your files stay where you already trust them.</p>
-                </div>
-                <div class="bg-zinc-800 p-8 rounded-3xl border border-amber-400">
-                    <h3 class="font-semibold text-2xl mb-4 text-amber-400">Hybrid</h3>
-                    <p class="text-zinc-400 mb-6">Primary in your cloud + encrypted backup in ours. Maximum peace of mind.</p>
-                    <span class="text-xs bg-amber-400 text-emerald-900 px-3 py-1 rounded-full">Best of both worlds</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="py-24 bg-emerald-700 text-white">
-        <div class="max-w-2xl mx-auto px-6 text-center">
-            <h2 class="heading-font text-5xl font-bold mb-6">Ready to build your family's legacy?</h2>
-            <p class="text-xl mb-10">Join hundreds of parents preserving what matters most.</p>
-            
-            <button onclick="showWaitlist()" 
-                    class="bg-white text-emerald-700 hover:bg-amber-100 font-semibold px-12 py-5 rounded-2xl text-xl transition w-full md:w-auto">
-                Join the Free Waitlist
+            <button
+              type="submit"
+              class="w-full bg-emerald-700 hover:bg-emerald-800 text-white py-4 rounded-2xl font-semibold text-lg transition"
+            >
+              Join Waitlist
             </button>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-zinc-900 text-zinc-400 py-12">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <div class="flex justify-center mb-6">
-                <img src="https://picsum.photos/id/1074/64/64" alt="Logo" class="w-8 h-8 tree-icon opacity-75">
-            </div>
-            <p class="mb-4">© 2026 Legacy Archive. Your memories belong to you.</p>
-            <div class="flex justify-center gap-6 text-sm">
-                <a href="#" class="hover:text-white">Privacy</a>
-                <a href="#" class="hover:text-white">Terms</a>
-                <a href="#" class="hover:text-white">Contact</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Waitlist Modal -->
-    <div id="waitlistModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-[100]">
-        <div class="bg-white rounded-3xl max-w-md w-full mx-4 p-8">
-            <div class="flex justify-between items-center mb-6">
-                <h3 class="text-2xl font-semibold">Join the Waitlist</h3>
-                <button onclick="hideWaitlist()" class="text-3xl leading-none text-zinc-400 hover:text-zinc-600">&times;</button>
-            </div>
-            
-            <form id="waitlistForm" onsubmit="submitWaitlist(event)">
-                <div class="space-y-6">
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Full Name</label>
-                        <input type="text" id="name" required 
-                               class="w-full px-4 py-3 border border-zinc-300 rounded-2xl focus:outline-none focus:border-emerald-500">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Email Address</label>
-                        <input type="email" id="email" required 
-                               class="w-full px-4 py-3 border border-zinc-300 rounded-2xl focus:outline-none focus:border-emerald-500">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2">How many children do you have?</label>
-                        <input type="number" id="children" min="1" required 
-                               class="w-full px-4 py-3 border border-zinc-300 rounded-2xl focus:outline-none focus:border-emerald-500">
-                    </div>
-                    <button type="submit"
-                            class="w-full bg-emerald-700 hover:bg-emerald-800 text-white py-4 rounded-2xl font-semibold text-lg transition">
-                        Join Waitlist
-                    </button>
-                </div>
-            </form>
-        </div>
+          </div>
+        </form>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

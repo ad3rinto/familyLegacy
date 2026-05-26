@@ -1,5 +1,3 @@
-script.js
-// cSpell:ignore waitlist
 // Legacy Archive Landing Page Script
 
 document.addEventListener('DOMContentLoaded', function() {
