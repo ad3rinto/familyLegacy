@@ -1,6 +1,6 @@
 // Legacy Archive Landing Page - CORS Fixed Version
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw5sNYQvHI4mkGqhpokgfqiODZJ7Dzv5KGRNpWKbMrLHFdS-Sk1__7MSirQVn4rSSg/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyu_Qwn6By_V7npedvjn24tr_cbKVSIqqH0tjXgqjbNwNEHvEf5R6A0-HfJ5R4dgWOp/exec";
 
 document.addEventListener('DOMContentLoaded', function() {
 
