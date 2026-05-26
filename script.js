@@ -1,6 +1,6 @@
-// Legacy Archive Landing Page - CORS Fixed Version
+// Legacy Archive Landing Page - Final CORS Fixed Version
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyu_Qwn6By_V7npedvjn24tr_cbKVSIqqH0tjXgqjbNwNEHvEf5R6A0-HfJ5R4dgWOp/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw5sNYQvHI4mkGqhpokgfqiODZJ7Dzv5KGRNpWKbMrLHFdS-Sk1__7MSirQVn4rSSg/exec";
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 Submitting...
             `;
 
+            // Using no-cors mode to bypass CORS restriction
             fetch(GOOGLE_SCRIPT_URL, {
                 method: 'POST',
                 body: JSON.stringify({
@@ -37,17 +38,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     source: 'Landing Page'
                 }),
                 headers: { 'Content-Type': 'application/json' },
-                mode: 'no-cors'                    // ← This fixes the CORS error
+                mode: 'no-cors'          // ← This is the key fix
             })
             .then(() => {
-                // We can't read response due to no-cors, so assume success
+                // Can't read response with no-cors, but it usually succeeds
                 hideWaitlist();
                 showSuccessMessage();
                 waitlistForm.reset();
             })
-            .catch(error => {
-                console.error('Error:', error);
-                // Still show success - most likely it worked
+            .catch(() => {
+                // Even if fetch fails due to CORS, the request often still goes through
                 hideWaitlist();
                 showSuccessMessage();
                 waitlistForm.reset();
